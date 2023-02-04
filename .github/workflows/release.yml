@@ -17,10 +17,12 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm install
-      - env:
+      - name: Retrieve the secret and decode it to a file
+        env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - run: echo $NPM_TOKEN
+        run: |
+          echo $NPM_TOKEN
+      - run: npm install
   # testing-app:
   #   runs-on: ubuntu-latest
   #   steps:
