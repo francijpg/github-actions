@@ -20,8 +20,8 @@ jobs:
       - run: npm install
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: Hello world action step
-        uses: ./ # Uses an action in the root directory
+      - run: 
+          example-command "$NPM_TOKEN"
   # testing-app:
   #   runs-on: ubuntu-latest
   #   steps:
