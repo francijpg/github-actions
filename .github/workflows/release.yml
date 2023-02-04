@@ -5,9 +5,9 @@ name: Release Package
 
 on:
   push:
-    branches: ['main']
+    branches: ["main"]
   pull_request:
-    branches: ['main']
+    branches: ["main"]
 
 jobs:
   build:
@@ -20,8 +20,11 @@ jobs:
       - run: npm install
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          
-  testing-app:
-    runs-on: ubuntu-latest
-    steps:
+      - run: node
+      - run: console.log('hi!');
       - run: node index.js
+
+  # testing-app:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - run: node index.js
