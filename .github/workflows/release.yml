@@ -17,9 +17,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: |
-         npm install
-      - env:
+      - run: npm install
+        env:
          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: npm start
   # testing-app:
