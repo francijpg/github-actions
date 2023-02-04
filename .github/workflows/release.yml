@@ -20,13 +20,8 @@ jobs:
       - run: npm install
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - run: node
-      - main: "index.js"
-      - run: console.log('hi!')
-      - run: node index.js
       - name: Hello world action step
         uses: ./ # Uses an action in the root directory
-        main: "index.js"
   # testing-app:
   #   runs-on: ubuntu-latest
   #   steps:
