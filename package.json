@@ -1,0 +1,23 @@
+{
+  "name": "@francijpg/github-actions",
+  "version": "0.0.1",
+  "description": "this is an example using github actions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/francijpg/github-actions.git"
+  },
+  "author": "francijpg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/francijpg/github-actions/issues"
+  },
+  "homepage": "https://github.com/francijpg/github-actions#readme",
+  "dependencies": {
+    "@francijpg/github-actions-package": "^0.0.2",
+    "dotenv": "^16.0.3"
+  }
+}
