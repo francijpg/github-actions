@@ -17,15 +17,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - name: Retrieve the secret and decode it to a file
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: |
-          echo $NPM_TOKEN | base64 --decode > cert.der
-      - name: Show certificate information
-        run: |
-          openssl x509 -in cert.der -inform DER -text -noout
-#       - run: npm install
+      - run: npm install
   # testing-app:
   #   runs-on: ubuntu-latest
   #   steps:
