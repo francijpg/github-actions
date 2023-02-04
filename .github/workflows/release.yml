@@ -18,11 +18,9 @@ jobs:
         with:
           node-version: 16
       - run: npm install
-      - shell: bash
-        env:
+      - env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: |
-          example-command "$NPM_TOKEN"
+      - run: echo $NPM_TOKEN
   # testing-app:
   #   runs-on: ubuntu-latest
   #   steps:
