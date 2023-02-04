@@ -20,7 +20,7 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: npm install
-#       - run: npm start
+      - run: npm start
   # testing-app:
   #   runs-on: ubuntu-latest
   #   steps:
